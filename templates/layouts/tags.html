@@ -1,0 +1,69 @@
+<section class="px-4 sm:px-6 lg:px-6 mt-8">
+    <section>
+        <p class="mb-5 font-bold text-lg">Tags</p>
+    </section>
+    <div class="max-w-4xl mx-auto mb-2">
+        <!-- Tags Grid -->
+        <div class="grid grid-cols-4 gap-4">
+            <!-- Tag 1: Best Sellers -->
+            <a href="#"
+               class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="aspect-square overflow-hidden">
+                    <img src="{{ url_for('static',filename='assets/img/AULA f87.jpg ') }}"
+                         alt="Best Sellers Collection"
+                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="p-3">
+                    <h3 class="text-sm font-semibold text-gray-800 text-center">Best Sellers</h3>
+                </div>
+            </a>
+
+            <!-- Tag 2: New Arrivals -->
+            <a href="#"
+               class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="aspect-square overflow-hidden">
+                    <img src="{{ url_for('static',filename='assets/img/Attack Shark X11.jpg') }}"
+                         alt="New Arrivals Collection"
+                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="p-3">
+                    <h3 class="text-sm font-semibold text-gray-800 text-center">New Arrivals</h3>
+                </div>
+            </a>
+
+            <!-- Tag 3: On Sale -->
+            <a href="#"
+               class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="aspect-square overflow-hidden">
+                    <img src="{{ url_for('static',filename='assets/img/ARTISAN MOUSEPAD.jpg') }}"
+                         alt="On Sale Collection"
+                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="p-3">
+                    <h3 class="text-sm font-semibold text-gray-800 text-center">On Sale</h3>
+                </div>
+            </a>
+
+            <!-- Tag 4: Limited Edition -->
+            <a href="#"
+               class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="aspect-square overflow-hidden">
+                    <img src="{{ url_for('static',filename='assets/img/AULA WIN60HE (1).jpg') }}"
+                         alt="Limited Edition Collection"
+                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="p-3">
+                    <h3 class="text-sm font-semibold text-gray-800 text-center">Limited Edition</h3>
+                </div>
+            </a>
+        </div>
+
+        <!-- View More Button -->
+        <div class="mt-8 sm:mt-12 text-center">
+            <a href="#"
+               class="inline-block bg-gray-900 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                View More Tags
+            </a>
+        </div>
+    </div>
+</section>

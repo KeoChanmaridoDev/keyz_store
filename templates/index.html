@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyz Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/style.css') }}">
+
+</head>
+
+<body class="antialiased ">
+
+
+<!-- Search Overlay -->
+<div id="search-overlay"
+     class="fixed inset-0 bg-white bg-opacity-95 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0">
+    <div class="w-full max-w-xl text-center">
+        <input type="text" id="search-input" placeholder="Search for products..."
+               class="w-full text-2xl bg-transparent border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-gray-900 text-center placeholder-gray-400">
+        <p class="mt-4 text-sm text-gray-500">Press Enter to search or Esc to close</p>
+    </div>
+    <button id="close-search"
+            class="absolute top-6 right-6 text-2xl text-gray-600 hover:text-gray-900">&times;
+    </button>
+</div>
+
+
+<div class="max-w-4xl mx-auto">
+
+    <!-- Header Section -->
+    {% include('layouts/header.html') %}
+
+    <!-- Slide Section -->
+    {% include('layouts/slide.html') %}
+
+
+    <!-- Shop By Tag Section -->
+    {% include('layouts/tags.html') %}
+
+
+    <!-- Main Content - Product Grid -->
+    <main class="px-4 sm:px-6 lg:px-6 pb-6 pt-6">
+        <section>
+            <p class="mb-5 font-bold text-lg">Products</p>
+        </section>
+        <div id="product-grid" class="grid grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="mt-8 sm:mt-12 text-center">
+            <a href="{{ url_for('products') }}"
+               class="inline-block bg-gray-900 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                View More Tags
+            </a>
+        </div>
+
+        <div id="no-results" class="text-center text-gray-500 hidden mt-8">
+            <p>No products found matching your search.</p>
+        </div>
+    </main>
+    <main class="px-4 sm:px-6 lg:px-6 pb-6 pt-6 ">
+        <section>
+            <p class="mb-5 font-bold text-lg">Products</p>
+        </section>
+        <div id="product-grid" class="grid grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="{{ url_for('product') }}">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/IEM Earbud (1).jpg') }}"
+                             alt="Black T-shirt with a car graphic"
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-2">
+
+                                <span class="bg-gray-900 text-white text-xs  px-3 py-1 rounded-full">
+                                    Best Seller
+                                </span>
+
+                            <span class="bg-red-600 text-white text-xs  px-3 py-1  rounded-full">
+                                    no stock
+                                </span>
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">CCC Charity Tee</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">KDMV Collabs / Tees</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$18.00</p>
+
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="mt-8 sm:mt-12 text-center">
+            <a href="{{ url_for('promotions') }}"
+               class="inline-block bg-gray-900 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                View More Tags
+            </a>
+        </div>
+
+        <div id="no-results" class="text-center text-gray-500 hidden mt-8">
+            <p>No products found matching your search.</p>
+        </div>
+    </main>
+
+
+</div>
+
+
+<!-- Footer -->
+
+{% include('layouts/footer.html') %}
+
+<!-- JavaScript for functionality -->
+<script src="{{ url_for('static',filename='assets/js/app.js') }}">
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyz Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+</head>
+
+<body class="antialiased">
+
+<div id="search-overlay"
+     class="fixed inset-0 bg-white bg-opacity-95 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0">
+    <div class="w-full max-w-xl text-center">
+        <input type="text" id="search-input" placeholder="Search for products..."
+               class="w-full text-2xl bg-transparent border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-gray-900 text-center placeholder-gray-400">
+        <p class="mt-4 text-sm text-gray-500">Press Enter to search or Esc to close</p>
+    </div>
+    <button id="close-search"
+            class="absolute top-6 right-6 text-2xl text-gray-600 hover:text-gray-900">&times;
+    </button>
+</div>
+
+<div class="max-w-4xl mx-auto">
+
+    {% include('layouts/header.html') %}
+
+    <section class="border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="category-filter flex items-center gap-2 overflow-x-auto">
+                <button class="flex-shrink-0 flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-colors
+                                bg-gray-900 text-white border border-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M4 13m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M14 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M14 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z">
+                        </path>
+                    </svg>
+                    All
+                </button>
+                <button class="flex-shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-colors
+                                bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 hover:border-gray-400">
+                    Keyboard
+                </button>
+                <button class="flex-shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-colors
+                                bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 hover:border-gray-400">
+                    Mice
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <main class="px-4 sm:px-6 lg:px-6 pb-12 pt-12 min-h-screen">
+        <section>
+            <p class="mb-5 font-bold text-lg">New Arrivals</p>
+        </section>
+        <div id="product-grid" class="grid grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="#">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/AULA F65.jpg') }}" alt="Product image"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">Sample Product</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">CATEGORY</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$25.00</p>
+                    </div>
+                </a>
+            </div>
+
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="#">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/AULA F65.jpg') }}" alt="Product image"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">Sample Product</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">CATEGORY</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$25.00</p>
+                    </div>
+                </a>
+            </div>
+
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="#">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/AULA F65.jpg') }}" alt="Product image"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">Sample Product</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">CATEGORY</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$25.00</p>
+                    </div>
+                </a>
+            </div>
+
+            <div
+                    class="product-card group bg-white border border-gray-200 shadow-md rounded-lg transition-shadow hover:shadow-xl overflow-hidden">
+                <a href="#">
+                    <div class="product-image-container relative">
+                        <img src="{{ url_for('static',filename='assets/img/AULA F65.jpg') }}" alt="Product image"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-sm sm:text-base">Sample Product</p>
+                        <p class="text-xs text-gray-400 mt-1 uppercase">CATEGORY</p>
+                        <p class="text-sm text-gray-500 mt-1 text-red-500 font-bold">$25.00</p>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </main>
+</div>
+
+
+{% include('layouts/footer.html') %}
+
+<script src="{{ url_for('static',filename='assets/js/app.js') }}"></script>
+
+</body>
+
+</html>

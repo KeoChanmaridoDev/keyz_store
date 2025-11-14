@@ -1,0 +1,87 @@
+<!-- Carousel Section -->
+<section class="px-4 sm:px-6 lg:px-6 py-8">
+    <!-- MODIFICATION: Removed max-w-6xl and mx-auto to allow carousel to match parent width -->
+    <div id="carousel-container" class="relative w-full overflow-hidden rounded-lg">
+        <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+            <!-- Slide 1 -->
+            <div class="carousel-item min-w-full relative">
+                <div class="w-full aspect-[16/5] bg-gray-100 relative">
+                    <img src="{{ url_for('static',filename='assets/img/WELCOME TO KEYZ STORE.jpg') }}"
+                         class="w-full h-full object-cover"
+                         alt="New Arrivals">
+                    <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
+                    <div
+                            class="absolute inset-0 hidden md:flex flex-col items-center justify-center text-white p-4">
+                        <h2 class="text-4xl sm:text-5xl font-extrabold text-center drop-shadow-lg">WELCOME TO
+                            KEYZ STORE</h2>
+                        <p class="mt-2 text-lg sm:text-xl text-center font-medium drop-shadow-md">Discover your
+                            next favorite piece.</p>
+                        <a href="#"
+                           class="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-200 transition-colors duration-200">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item min-w-full relative">
+                <div class="w-full aspect-[16/5] bg-gray-100 relative">
+                    <img src="{{ url_for('static',filename='assets/img/WELCOME TO KEYZ STORE.jpg') }}"
+                         class="w-full h-full object-cover"
+                         alt="New Arrivals">
+                    <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
+                    <div
+                            class="absolute inset-0 hidden md:flex flex-col items-center justify-center text-white p-4">
+                        <h2 class="text-4xl sm:text-5xl font-extrabold text-center drop-shadow-lg">WELCOME TO
+                            KEYZ STORE</h2>
+                        <p class="mt-2 text-lg sm:text-xl text-center font-medium drop-shadow-md">Discover your
+                            next favorite piece.</p>
+                        <a href="#"
+                           class="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-200 transition-colors duration-200">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item min-w-full relative">
+                <div class="w-full aspect-[16/5] bg-gray-100 relative">
+                    <img src="{{ url_for('static',filename='assets/img/WELCOME TO KEYZ STORE.jpg') }}"
+                         class="w-full h-full object-cover"
+                         alt="New Arrivals">
+                    <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
+                    <div
+                            class="absolute inset-0 hidden md:flex flex-col items-center justify-center text-white p-4">
+                        <h2 class="text-4xl sm:text-5xl font-extrabold text-center drop-shadow-lg">WELCOME TO
+                            KEYZ STORE</h2>
+                        <p class="mt-2 text-lg sm:text-xl text-center font-medium drop-shadow-md">Discover your
+                            next favorite piece.</p>
+                        <a href="#"
+                           class="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-200 transition-colors duration-200">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prev Button -->
+        <button id="prev-btn"
+                class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/50 p-2 rounded-full text-gray-800 hover:bg-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <!-- Next Button -->
+        <button id="next-btn"
+                class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/50 p-2 rounded-full text-gray-800 hover:bg-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+
+        <!-- Indicators -->
+        <div id="indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+            <!-- Indicators will be dynamically created here -->
+        </div>
+    </div>
+</section>

@@ -1,0 +1,97 @@
+/* Custom styles to match the aesthetic */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+  /* A slightly softer black */
+}
+
+/* Custom font for the clock */
+#clock {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Style for the logo */
+.logo {
+  font-weight: 700;
+  font-size: 1.875rem;
+  /* 30px */
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
+
+/* Product image container */
+.product-image-container {
+  background-color: #f9fafb;
+  /* A very light gray for the image background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover .product-image-container:not(.out-of-stock) img {
+  transform: scale(1.05);
+}
+
+/* Navigation Menu Styles */
+nav a {
+  position: relative;
+  padding-bottom: 6px;
+  /* Space for the underline */
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #111827;
+  outline: none;
+  /* remove default focus outline */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Search Overlay Styles */
+#search-overlay {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Carousel Styles - Smoother Transition */
+.carousel-item {
+  transition: transform 0.7s ease-in-out;
+}
+
+/* Hide scrollbar for category filter, but allow scrolling */
+.category-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.category-filter {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
