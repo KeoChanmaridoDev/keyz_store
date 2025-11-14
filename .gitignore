@@ -1,0 +1,37 @@
+.DS_Store
+Thumbs.db
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+vevn/
+env/
+ENV/
+
+# Flask instance / local data
+instance/
+*.db
+
+# Environment files
+.env
+.env.*
+
+# Node tooling (if added later)
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Editors
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+
